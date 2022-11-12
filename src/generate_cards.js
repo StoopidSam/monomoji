@@ -73,3 +73,5 @@ function generate_cards(order, symbols) {
 
   return projective_plane;
 }
+
+module.exports = { generate_cards };
