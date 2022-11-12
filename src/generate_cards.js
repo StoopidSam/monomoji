@@ -71,7 +71,17 @@ function generate_cards(order, symbols) {
 
   projective_plane.push(infinite_converge_line); // Add the infinite converge line to the projective plane
 
-  return projective_plane;
+  let cards = []; // Create an array for the cards
+
+  for (let row of projective_plane) {
+    // Loop through each row of the projective plane
+    for (let point of row) {
+      // Loop through each point of the row
+      cards.push(point); // Add the point to the array of cards
+    }
+  }
+
+  return cards; // Return the array of cards
 }
 
 module.exports = { generate_cards };
