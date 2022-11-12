@@ -20,7 +20,7 @@ The projective plane is effectively a grid. Its size lengths are defined by its 
 
 #### Order
 
-The order ($n$) is a number which defines many parameters of the projective plane. The order...
+The order ( $n$ ) is a number which defines many parameters of the projective plane. The order...
 
 - Must be a prime number
 - Defines the size of the grid
