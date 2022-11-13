@@ -1,7 +1,7 @@
 export default function NumOfCardsPicker({ setNumOfCards, numOfCards }) {
   return (
     <div>
-      <label for="num-of-cards-picker">
+      <label htmlFor="num-of-cards-picker">
         Please select the amount of cards you would like in your deck:
         <span> </span>
       </label>

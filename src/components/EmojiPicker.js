@@ -1,17 +1,19 @@
-import { useState } from "react";
-
-export default function EmojiPicker({ numOfCards }) {
-  let emojis = [];
-
-  for (let i = 0; i < numOfCards; i++) {
-    emojis.push("");
-  }
-
+export default function EmojiPicker({
+  numOfCards,
+  emojis,
+  setEmojis,
+  handleEmojiChange,
+}) {
   return (
     <div>
       <p>Please select {numOfCards} emojis:</p>
-      {emojis.map((numOfCards) => (
-        <input type="text"></input>
+      {emojis.map((emoji) => (
+        <input
+          type="text"
+          value={emoji}
+          key={emoji}
+          onChange={(e) => handleEmojiChange(e.target.value)}
+        ></input>
       ))}
     </div>
   );

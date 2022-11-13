@@ -1,26 +1,9 @@
-import generate_cards from "../generate_cards";
-
-export default function Deck({ numOfCards }) {
+export default function Deck({ numOfCards, cards }) {
   return (
     <div>
       <h2>Deck</h2>
-      {generate_cards(3, [
-        "🌹",
-        "👀",
-        "💋",
-        "😡",
-        "💥",
-        "💯",
-        "☀️",
-        "🍀",
-        "✅",
-        "🌈",
-        "💐",
-        "🌺",
-        "💦",
-        "⭐",
-      ]).map((card) => (
-        <div className="card">
+      {cards.map((card) => (
+        <div className="card" key={card}>
           <p>{card.map((emoji) => `${emoji}, `)}</p>
         </div>
       ))}
