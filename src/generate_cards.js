@@ -1,4 +1,4 @@
-export default function generate_cards(order, symbols) {
+function generate_cards(order, symbols) {
   let projective_plane = []; // Create array for projective plane. This will eventually contain all points
   let affine_plane = []; // Create array for affine plane. This contains just the main grid
   let infinite_converge_line = []; // The infinite converge line is where all parallell lines converge
@@ -83,3 +83,5 @@ export default function generate_cards(order, symbols) {
 
   return cards; // Return the array of cards
 }
+
+module.exports = { generate_cards };
