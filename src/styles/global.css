@@ -7,3 +7,31 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+main {
+  width: 60%;
+  background-color: rgb(170, 170, 170);
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+h2  {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.DeckGenerator {
+  width: 50%;
+}
+
+.card {
+  border:rgb(0, 0, 0) solid 1px;
+}
