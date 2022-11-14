@@ -16,7 +16,13 @@ export default function Info() {
         <li>
           <p>
             To view my source code, visit me on{" "}
-            <Link href="https://github.com/StoopidSam/monomoji">GitHub</Link>.
+            <Link
+              href="https://github.com/StoopidSam/monomoji"
+              className="link"
+            >
+              GitHub
+            </Link>
+            .
           </p>
         </li>
       </ul>

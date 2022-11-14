@@ -6,7 +6,7 @@ import Head from "next/head";
 
 export default function HomePage() {
   return (
-    <div>
+    <div id="container">
       <Head>
         <title>Monomoji</title>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
