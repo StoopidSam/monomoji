@@ -6,8 +6,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
   min-height: 100vh;
+  background: white;
 }
 
 header {
@@ -32,8 +33,9 @@ header {
   padding: 10px
 }
 
-h1 {
+#header-content > h1 {
   text-align: center;
+  font-weight: 700;
   font-size: 3rem;
   color: white;
 }
@@ -46,4 +48,26 @@ h1 {
 #github-logo > img {
   width: 80%;
   aspect-ratio: 1 / 1;
+}
+
+main {
+  width: 80vh;
+  margin: 0 auto;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+ul {
+  padding: 20px 0;
+}
+
+p {
+  font-size: 1.1rem;
 }
