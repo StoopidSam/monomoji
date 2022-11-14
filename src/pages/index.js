@@ -1,5 +1,7 @@
 import Header from "../components/Header";
 import Info from "../components/Info";
+import DeckGenerator from "../components/DeckGenerator";
+
 import Head from "next/head";
 
 export default function HomePage() {
@@ -21,6 +23,7 @@ export default function HomePage() {
       <Header />
       <main>
         <Info />
+        <DeckGenerator />
       </main>
     </div>
   );

@@ -56,18 +56,30 @@ main {
 }
 
 section {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 
 h2 {
   font-size: 2rem;
   text-align: center;
-}
-
-ul {
-  padding: 20px 0;
+  padding-bottom: 15px;
 }
 
 p {
   font-size: 1.1rem;
+  padding: 5px 0;
+}
+
+select {
+  border: 1px solid black;
+}
+
+label > p {
+  display: inline;
+}
+
+form {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #ffcc4d;
 }
