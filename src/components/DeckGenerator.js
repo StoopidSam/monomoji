@@ -1,8 +1,30 @@
 import { useState } from "react";
 import NumOfCardsPicker from "./NumOfCardsPicker";
+import EmojisPicker from "./EmojisPicker";
 
 export default function DeckGenerator() {
-  const [numOfCards, setNumOfCards] = useState("7");
+  const [numOfCards, setNumOfCards] = useState("(select one)");
+
+  const [emojis, setEmojis] = useState([]);
+
+  function handleNumOfCardsChange(numOfCards) {
+    setNumOfCards(parseInt(numOfCards));
+
+    setEmojis([]);
+
+    let emptyEmojisList = [];
+
+    for (let i = 0; i < numOfCards; i++) {
+      emptyEmojisList.push(i);
+    }
+
+    setEmojis(emptyEmojisList);
+  }
+
+  function handleEmojiChange(emoji) {
+    setEmojis();
+  }
+
   return (
     <section>
       <h2>Deck Generator</h2>
@@ -11,7 +33,12 @@ export default function DeckGenerator() {
       </p>
       <form>
         <NumOfCardsPicker
-          setNumOfCards={setNumOfCards}
+          handleNumOfCardsChange={handleNumOfCardsChange}
+          numOfCards={numOfCards}
+        />
+        <EmojisPicker
+          emojis={emojis}
+          handleEmojiChange={handleEmojiChange}
           numOfCards={numOfCards}
         />
       </form>

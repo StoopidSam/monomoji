@@ -1,12 +1,18 @@
-export default function NumOfCardsPicker({ numOfCards, setNumOfCards }) {
+export default function NumOfCardsPicker({
+  numOfCards,
+  handleNumOfCardsChange,
+}) {
   return (
     <div id="NumOfCardsPicker">
       <label htmlFor="numOfCards">
         <p>How many cards would you like? </p>
         <select
           value={numOfCards}
-          onChange={(e) => setNumOfCards(e.target.value)}
+          onChange={(e) => handleNumOfCardsChange(e.target.value)}
         >
+          <option selected disabled hidden>
+            (select one)
+          </option>
           <option>7</option>
           <option>13</option>
           <option>31</option>
