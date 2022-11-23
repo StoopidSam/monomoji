@@ -15,14 +15,19 @@ export default function DeckGenerator() {
     let emptyEmojisList = [];
 
     for (let i = 0; i < numOfCards; i++) {
-      emptyEmojisList.push(i);
+      emptyEmojisList.push({ emoji_char: "", index: i });
     }
 
     setEmojis(emptyEmojisList);
   }
 
-  function handleEmojiChange(emoji) {
-    setEmojis();
+  // Define a function that updates a single emoji in the emojis list
+  function handleEmojiChange(emoji, index) {
+    let newEmojisList = [...emojis];
+
+    newEmojisList[index] = { emoji_char: emoji, index: index };
+
+    setEmojis(newEmojisList);
   }
 
   return (

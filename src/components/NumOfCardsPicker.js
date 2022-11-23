@@ -10,7 +10,7 @@ export default function NumOfCardsPicker({
           value={numOfCards}
           onChange={(e) => handleNumOfCardsChange(e.target.value)}
         >
-          <option selected disabled hidden>
+          <option disabled hidden>
             (select one)
           </option>
           <option>7</option>

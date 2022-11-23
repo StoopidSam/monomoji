@@ -11,11 +11,10 @@ export default function EmojisPicker({
         <p>Which emojis would you like?</p>
         {emojis.map((emoji) => (
           <input
-            key={emoji}
             type="text"
-            maxLength="1"
-            value={emojis[emojis.indexOf(emoji)]}
-            onChange={(e) => handleEmojiChange(e.target.value)}
+            value={emoji.emoji_char}
+            key={emoji.index}
+            onChange={(e) => handleEmojiChange(e.target.value, emoji.index)}
           />
         ))}
       </div>
