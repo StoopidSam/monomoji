@@ -2,6 +2,7 @@ import { useState } from "react";
 import NumOfCardsPicker from "./NumOfCardsPicker";
 import EmojisPicker from "./EmojisPicker";
 import SubmitButton from "./SubmitButton";
+import Deck from "./Deck";
 import { generate_cards } from "../generate_cards";
 
 export default function DeckGenerator() {
@@ -60,6 +61,7 @@ export default function DeckGenerator() {
           numOfCards={numOfCards}
         />
         <SubmitButton />
+        <Deck cards={cards} />
       </form>
     </section>
   );
