@@ -17,7 +17,7 @@ export default function NumOfCardsPicker({
           <option>13</option>
           <option>31</option>
           <option>57</option>
-          <option>91</option>
+          <option>133</option>
         </select>
       </label>
       <p>

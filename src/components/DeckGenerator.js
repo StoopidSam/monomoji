@@ -42,7 +42,7 @@ export default function DeckGenerator() {
       emoji_chars.push(emoji.emoji_char);
     }
 
-    setCards(generate_cards(2, emoji_chars));
+    setCards(generate_cards(numOfCards, emoji_chars));
   }
 
   return (

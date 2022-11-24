@@ -1,4 +1,19 @@
-function generate_cards(order, symbols) {
+function generate_cards(numOfCards, symbols) {
+  let order = 0;
+  if (numOfCards == 7) {
+    order = 2;
+  } else if (numOfCards == 13) {
+    order = 3;
+  } else if (numOfCards == 31) {
+    order = 5;
+  } else if (numOfCards == 57) {
+    order = 7;
+  } else if (numOfCards == 133) {
+    order = 11;
+  } else {
+    return "Error: Invalid number of cards.";
+  }
+
   let projective_plane = []; // Create array for projective plane. This will eventually contain all points
   let affine_plane = []; // Create array for affine plane. This contains just the main grid
   let infinite_converge_line = []; // The infinite converge line is where all parallell lines converge
