@@ -1,3 +1,3 @@
 export default function SubmitButton() {
-  return <button type="submit">Submit</button>;
+  return <button type="submit">GENERATE</button>;
 }

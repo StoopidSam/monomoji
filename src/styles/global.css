@@ -108,3 +108,15 @@ input {
   outline: none;
   text-align: center;
 }
+
+button[type="submit"] {
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  text-align: left;
+  margin: 0 auto;
+  width: 20%;
+  min-width: 10rem;
+}
