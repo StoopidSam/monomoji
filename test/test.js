@@ -1,4 +1,4 @@
-const { generate_cards } = require("./generate_cards.js");
+import { generate_cards } from "../src/utils/generate_cards";
 
 console.log(
   generate_cards(13, [
