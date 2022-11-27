@@ -69,8 +69,8 @@ export default function DeckGenerator() {
           handleEmojiChange={handleEmojiChange}
           numOfCards={numOfCards}
         />
-        <SubmitButton />
         <Deck cards={cards} />
+        <SubmitButton />
       </form>
     </section>
   );

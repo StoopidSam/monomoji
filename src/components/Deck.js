@@ -1,8 +1,10 @@
+import Card from "./Card";
+
 export default function Deck({ cards }) {
   return (
-    <div>
+    <div id="Deck">
       {cards.map((card) => (
-        <p>{card.map((symbol) => symbol)}</p>
+        <Card emojis={card} key={card.index} />
       ))}
     </div>
   );

@@ -1,5 +1,5 @@
 function validate_input(numOfCards, emojis) {
-  // Cheack that each emoji field is filled out
+  // Check that each emoji field is filled out
   for (let emoji of emojis) {
     if (emoji.emoji_char === "") {
       return "Error: each emoji field must be filled out";
@@ -37,6 +37,11 @@ function validate_input(numOfCards, emojis) {
     numOfCards !== 133
   ) {
     return "Error: invalid number of cards";
+  }
+
+  // Check whether the number of cards is equal to the number of emojis
+  if (numOfCards !== emojis.length) {
+    return "Error: the number of cards must be equal to the number of emojis";
   }
 
   return true;
