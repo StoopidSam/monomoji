@@ -15,6 +15,7 @@ export default function EmojisPicker({
             value={emoji.emoji_char}
             key={emoji.index}
             onChange={(e) => handleEmojiChange(e.target.value, emoji.index)}
+            maxLength="2"
           />
         ))}
       </div>

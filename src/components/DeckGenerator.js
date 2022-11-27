@@ -6,6 +6,7 @@ import SubmitButton from "./SubmitButton";
 import Deck from "./Deck";
 
 import { generate_cards } from "../utils/generate_cards";
+import { validate_input } from "../utils/validate_input";
 
 export default function DeckGenerator() {
   const [numOfCards, setNumOfCards] = useState("(select one)");
@@ -39,13 +40,19 @@ export default function DeckGenerator() {
   function handleFormSubmit(event) {
     event.preventDefault();
 
-    let emoji_chars = [];
+    let validation = validate_input(numOfCards, emojis);
 
-    for (let emoji of emojis) {
-      emoji_chars.push(emoji.emoji_char);
+    if (validation === true) {
+      let emoji_chars = [];
+
+      for (let emoji of emojis) {
+        emoji_chars.push(emoji.emoji_char);
+      }
+
+      setCards(generate_cards(numOfCards, emoji_chars));
+    } else {
+      alert(validation);
     }
-
-    setCards(generate_cards(numOfCards, emoji_chars));
   }
 
   return (
