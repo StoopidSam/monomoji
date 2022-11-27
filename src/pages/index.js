@@ -1,18 +1,20 @@
+import Header from "../components/Header";
+import Info from "../components/Info";
 import DeckGenerator from "../components/DeckGenerator";
+
 import Head from "next/head";
 
-function HomePage() {
+export default function HomePage() {
   return (
-    <div>
+    <div id="container">
       <Head>
         <title>Monomoji</title>
       </Head>
+      <Header />
       <main>
-        <h1>Welcome to Monomoji!</h1>
-        <DeckGenerator className="DeckGenerator" />
+        <Info />
+        <DeckGenerator />
       </main>
     </div>
   );
 }
-
-export default HomePage;

@@ -1,6 +1,6 @@
 # Monomoji
 
-A web app that creates card decks for games that are similar to "Dobble" or "Spot it!".
+A web app that creates custom card decks for games that are similar to "Dobble" or "Spot it!".
 
 ## How does it work?
 
