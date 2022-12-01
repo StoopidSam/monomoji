@@ -61,7 +61,7 @@ export default function DeckGenerator() {
   }
 
   return (
-    <section>
+    <section id="DeckGenerator">
       <h2>Deck Generator</h2>
       <p>This is where you get to generate your own custom card deck.</p>
       <form onSubmit={handleFormSubmit}>

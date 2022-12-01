@@ -4,9 +4,9 @@ import DeckGenerator from "../components/DeckGenerator";
 
 import Head from "next/head";
 
-export default function HomePage() {
+export default function Container() {
   return (
-    <div id="container">
+    <div id="Container">
       <Head>
         <title>Monomoji</title>
       </Head>

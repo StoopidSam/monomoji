@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Info() {
   return (
-    <section>
+    <section id="Info">
       <h2>Info</h2>
       <ul>
         <li>
