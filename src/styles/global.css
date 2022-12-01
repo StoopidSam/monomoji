@@ -109,9 +109,9 @@ input {
   text-align: center;
 }
 
-button[type="submit"] {
+button {
   padding: 10px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 3px 20px 20px 3px;
   background-color: black;
   color: white;
   font-weight: 900;
@@ -140,4 +140,10 @@ button[type="submit"] {
   flex-wrap: wrap;
   justify-content: left;
   margin: 10px;
+}
+
+#Randomize {
+  border-radius: 20px;
+  text-align: center;
+  width: unset;
 }
