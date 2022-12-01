@@ -1,3 +1,7 @@
-export default function Card({ emojis }) {
-  return <div className="Card">{emojis.map((emoji) => emoji)}</div>;
+export default function Card({ emojis, key }) {
+  return (
+    <div className="Card" key={key}>
+      {emojis.map((emoji) => emoji)}
+    </div>
+  );
 }

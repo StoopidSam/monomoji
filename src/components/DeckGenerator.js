@@ -7,6 +7,7 @@ import Deck from "./Deck";
 
 import { generate_cards } from "../utils/generate_cards";
 import { validate_input } from "../utils/validate_input";
+import { randomize_emojis } from "../utils/randomize_emojis";
 
 export default function DeckGenerator() {
   const [numOfCards, setNumOfCards] = useState("(select one)");
@@ -55,6 +56,10 @@ export default function DeckGenerator() {
     }
   }
 
+  function randomizeEmojis() {
+    setEmojis(randomize_emojis(numOfCards));
+  }
+
   return (
     <section>
       <h2>Deck Generator</h2>
@@ -68,6 +73,7 @@ export default function DeckGenerator() {
           emojis={emojis}
           handleEmojiChange={handleEmojiChange}
           numOfCards={numOfCards}
+          randomizeEmojis={randomizeEmojis}
         />
         <Deck cards={cards} />
         <SubmitButton />
