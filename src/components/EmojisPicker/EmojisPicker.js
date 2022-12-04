@@ -1,4 +1,4 @@
-import Randomize from "./Randomize";
+import Randomize from "../Randomize";
 
 export default function EmojisPicker({
   emojis,

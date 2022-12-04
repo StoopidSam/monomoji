@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import styles from "./Info.module.css";
+
 export default function Info() {
   return (
     <section id="Info">

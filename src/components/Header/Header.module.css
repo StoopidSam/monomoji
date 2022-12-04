@@ -1,0 +1,21 @@
+.Header {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.HeaderContent {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.Logo {
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    padding: 10px
+}

@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-import NumOfCardsPicker from "./NumOfCardsPicker";
-import EmojisPicker from "./EmojisPicker";
-import SubmitButton from "./SubmitButton";
-import Deck from "./Deck";
+import NumOfCardsPicker from "../NumOfCardsPicker";
+import EmojisPicker from "../EmojisPickerr";
+import SubmitButton from "../SubmitButton";
+import Deck from "../Deck/";
 
-import { generate_cards } from "../utils/generate_cards";
-import { validate_input } from "../utils/validate_input";
-import { randomize_emojis } from "../utils/randomize_emojis";
+import { generate_cards } from "../../utils/generate_cards";
+import { validate_input } from "../../utils/validate_input";
+import { randomize_emojis } from "../../utils/randomize_emojis";
 
 export default function DeckGenerator() {
   const [numOfCards, setNumOfCards] = useState("(select one)");
