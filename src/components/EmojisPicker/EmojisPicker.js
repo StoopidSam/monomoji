@@ -18,6 +18,7 @@ export default function EmojisPicker({
             value={emoji.emoji_char}
             onChange={(e) => handleEmojiChange(e.target.value, emoji.index)}
             maxLength="2"
+            key={emoji.index}
           />
         ))}
         <Randomize randomizeEmojis={randomizeEmojis} />

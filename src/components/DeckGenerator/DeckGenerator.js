@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import NumOfCardsPicker from "../NumOfCardsPicker";
-import EmojisPicker from "../EmojisPickerr";
+import EmojisPicker from "../EmojisPicker";
 import SubmitButton from "../SubmitButton";
 import Deck from "../Deck/";
 
