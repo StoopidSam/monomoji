@@ -11,37 +11,11 @@ body {
   background: white;
 }
 
-header {
-  width: 100%;
-  height: 100px;
-  background-color: black;
-}
-
-#header-content {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-#logo {
-  height: 100px;
-  aspect-ratio: 1 / 1;
-  padding: 10px
-}
-
-#header-content > h1 {
+h1 {
   text-align: center;
   font-weight: 700;
   font-size: 3rem;
   color: white;
-}
-
-a {
-  padding: 0;
 }
 
 main {
@@ -85,7 +59,7 @@ select {
   outline: none;
 }
 
-label > p {
+label>p {
   display: inline;
 }
 
@@ -109,14 +83,15 @@ input {
   text-align: center;
 }
 
-button[type="submit"] {
+button {
   padding: 10px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 3px 20px 20px 3px;
   background-color: black;
   color: white;
   font-weight: 900;
   text-align: left;
-  margin: 0 auto;
+  margin: 10px auto;
+  margin-bottom: 0;
   width: 20%;
   min-width: 10rem;
 }

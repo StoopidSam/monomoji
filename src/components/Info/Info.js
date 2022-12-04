@@ -1,16 +1,18 @@
 import Link from "next/link";
 
+import styles from "./Info.module.css";
+
 export default function Info() {
   return (
-    <section>
+    <section id="Info">
       <h2>Info</h2>
       <ul>
         <li>
           <p>
             Monomoji is a web app that creates custom card decks for games that
-            are similar to "Dobble" or "Spot it!". Select the amount of cards
-            you'd like, pick some emojis, and click "Create Deck" to get
-            started.
+            are similar to &quot;Dobble&quot; or &quot;Spot it!&quot;. Select
+            the amount of cards you&apos;d like, pick some emojis, and click
+            &quot;Create Deck&quot; to get started.
           </p>
         </li>
         <li>

@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-import NumOfCardsPicker from "./NumOfCardsPicker";
-import EmojisPicker from "./EmojisPicker";
-import SubmitButton from "./SubmitButton";
-import Deck from "./Deck";
+import NumOfCardsPicker from "../NumOfCardsPicker";
+import EmojisPicker from "../EmojisPicker";
+import SubmitButton from "../SubmitButton";
+import Deck from "../Deck/";
 
-import { generate_cards } from "../utils/generate_cards";
+import { generate_cards } from "../../utils/generate_cards";
+import { validate_input } from "../../utils/validate_input";
+import { randomize_emojis } from "../../utils/randomize_emojis";
 
 export default function DeckGenerator() {
   const [numOfCards, setNumOfCards] = useState("(select one)");
@@ -39,17 +41,27 @@ export default function DeckGenerator() {
   function handleFormSubmit(event) {
     event.preventDefault();
 
-    let emoji_chars = [];
+    let validation = validate_input(numOfCards, emojis);
 
-    for (let emoji of emojis) {
-      emoji_chars.push(emoji.emoji_char);
+    if (validation === true) {
+      let emoji_chars = [];
+
+      for (let emoji of emojis) {
+        emoji_chars.push(emoji.emoji_char);
+      }
+
+      setCards(generate_cards(numOfCards, emoji_chars));
+    } else {
+      alert(validation);
     }
+  }
 
-    setCards(generate_cards(numOfCards, emoji_chars));
+  function randomizeEmojis() {
+    setEmojis(randomize_emojis(numOfCards));
   }
 
   return (
-    <section>
+    <section id="DeckGenerator">
       <h2>Deck Generator</h2>
       <p>This is where you get to generate your own custom card deck.</p>
       <form onSubmit={handleFormSubmit}>
@@ -61,9 +73,10 @@ export default function DeckGenerator() {
           emojis={emojis}
           handleEmojiChange={handleEmojiChange}
           numOfCards={numOfCards}
+          randomizeEmojis={randomizeEmojis}
         />
-        <SubmitButton />
         <Deck cards={cards} />
+        <SubmitButton />
       </form>
     </section>
   );

@@ -4,7 +4,7 @@ export default function NumOfCardsPicker({
 }) {
   return (
     <div id="NumOfCardsPicker">
-      <label htmlFor="numOfCards">
+      <label>
         <p>How many cards would you like? </p>
         <select
           value={numOfCards}

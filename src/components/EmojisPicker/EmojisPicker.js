@@ -1,7 +1,10 @@
+import Randomize from "../Randomize";
+
 export default function EmojisPicker({
   emojis,
   handleEmojiChange,
   numOfCards,
+  randomizeEmojis,
 }) {
   if (numOfCards === "(select one)") {
     return;
@@ -13,10 +16,12 @@ export default function EmojisPicker({
           <input
             type="text"
             value={emoji.emoji_char}
-            key={emoji.index}
             onChange={(e) => handleEmojiChange(e.target.value, emoji.index)}
+            maxLength="2"
+            key={emoji.index}
           />
         ))}
+        <Randomize randomizeEmojis={randomizeEmojis} />
       </div>
     );
   }
